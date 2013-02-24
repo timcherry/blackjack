@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import web
 import json
 import random
@@ -74,9 +76,7 @@ class Blackjack:
 
     def is_game_over(self,):
         player_state = self.player.get_state()
-        if player_state == "Busted" or player_state == "Blackjack":
-            return True
-        return False
+        return (player_state == "Busted" or player_state == "Blackjack")
 
     def return_state(self, player_stand=False):
         game_over = False
